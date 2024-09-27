@@ -1,3 +1,7 @@
+/* Timur Nikitenko st128375@student.spbu.ru
+ * First problem
+ */
+
 #include <iostream>
 #include <string>
 #include "sayhello.hpp"
