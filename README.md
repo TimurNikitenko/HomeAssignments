@@ -1,5 +1,5 @@
-# problem-1
-Repository for first problem
+# HomeAssignments
+Repository for home assignments
 Задача №1
 Никитенко Тимур Романович, Б81
 st128375@student.spbu.ru
