@@ -37,8 +37,44 @@ int read_write(std::string file_name) {
 	return 0;
 }
 
-int calculate_polish(std::string record) {
+int polish_calculate(std::string record) {
+        size = record.length();
+	int* record_array  =  new int[size];
+	int top = -1;
+	int i = 0;
 
-	return 0;
+	while (i < size) {
+		while (isspace(record[i])) {
+			i++;
+		}
+		if (isdigit(record[i]) || (record[i] == '-' && isdigit(record[i+1]))) {
+			int value = atoi(&record[i]);
+			record_array[++top] = value;
+			
+			while (isdigit(record[i]) || record[i] == '-') {
+				i++;
+			}
+		}
+
+		else if (record[i] == '-' || record[i] == '+' || record[i] == '*' || record[i] == '/') {
+			int a = record_array[top--];
+			int b = record_array[top--];
+			int res;
+
+			switch (expression[i]) {
+				case '+': res = a + b; break;
+		                case '-': res = a - b; break;
+			        case '*': res = a * b; break;
+			        case '/': res = a * b; break;
+			}
+
+			record_array[++top] = res;
+			i++;
+		}
+	}
+        
+        result = record_array[top];
+        delete[] record_array;
+	return result;
 }
 
