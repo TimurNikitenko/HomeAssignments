@@ -8,5 +8,5 @@ Home assingment 1 - extended "Hello world". First says "Hello, World". After thi
 ## Build
 make
 ## Run
-./hello
+./output
 
