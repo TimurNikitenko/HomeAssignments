@@ -1,10 +1,10 @@
-# Assignment 2
+## Assignment 2b
 ## Author
 Никитенко Тимур Романович, группа 24.Б81-мм
 ## Contacts
 st128375@student.spbu.ru
 ## Description
-Program that reverses binary file
+Program that decode reverse polish notation
 ## Build
 make
 ## Run
