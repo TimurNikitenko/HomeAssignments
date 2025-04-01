@@ -1,16 +1,19 @@
-PROJECT = classes
+CXX      := g++
+CXXFLAGS := -std=c++11 -Wall -Werror -Wpedantic -g -fPIC
+TESTFLAGS:= -lgtest -lgtest_main -pthread
+TARGET   := classes
+SRC      := templates.cpp
+OBJ      := $(SRC:.cpp=.o)   
 
-CXX = g++
+all: $(TARGET)
 
-CXXFLAGS = -I. -std=c++11 -Wall -Werror -Wpedantic -g -fPIC
-TESTFLAGS = -lgtest -lgtest_main -pthread
+$(TARGET): $(OBJ)
+ $(CXX) $(CXXFLAGS) -o $@ $^ $(TESTFLAGS)
 
-SRC = templates.cpp
+%.o: %.cpp
+ $(CXX) $(CXXFLAGS) -c $< -o $@
 
-$(PROJECT) : $(SRC)
-	$(CXX) -o $@ $< $(TESTFLAGS)
-
-all: $(PROJECT)
+.PHONY: all clean
 
 clean:
-	rm $(PROJECT)
+ rm -f $(TARGET) *.o
