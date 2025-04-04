@@ -5,6 +5,8 @@ TARGET   := classes
 SRC      := templates.cpp
 OBJ      := $(SRC:.cpp=.o)   
 
+.PHONY: all clean
+
 all: $(TARGET)
 
 $(TARGET): $(OBJ)
@@ -13,7 +15,5 @@ $(TARGET): $(OBJ)
 %.o: %.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
-.PHONY: all clean
-
 clean:
-	rm -f $(TARGET) *.o
+	rm -f $(TARGET) $(OBJ)
