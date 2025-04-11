@@ -1,3 +1,7 @@
+/*Nikitenko Timur st128375@student.spbu.ru
+  templates
+*/
+
 #ifndef TEMPLATES_H
 #define TEMPLATES_H
 

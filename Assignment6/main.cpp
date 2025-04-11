@@ -1,3 +1,7 @@
+/*Nikitenko Timur st128375@student.spbu.ru
+  tests
+*/
+
 #include <gtest/gtest.h>
 #include "classes.h"    
 #include "templates.h"  

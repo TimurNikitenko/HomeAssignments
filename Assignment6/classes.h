@@ -1,3 +1,7 @@
+/*Nikitenko Timur st128375@student.spbu.ru
+  classes
+*/
+
 #ifndef CLASSES_H
 #define CLASSES_H
 
